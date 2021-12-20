@@ -54,17 +54,28 @@ $posts = [
 
 // var_dump($posts['10/01/2019'][0]['title']);
 
-for($i = 0; $i < count($posts); $i++) {
-    // $data = $posts[$i];
-    $subarray = current($posts);
-    // var_dump($post); die;
-    // echo $posts[$i];
-    for($j = 0; $j < count($subarray); $j++){
-        echo $subarray[$j]["title"] . "<br>";
-        echo $subarray[$j]["author"] . "<br>";
-        echo $subarray[$j]["text"] . "<br>";
-    }
-}
+
+// for($i = 0; $i < count($posts); $i++) {
+//     $subarray = current($posts);
+//     // var_dump($post); die;
+//     for($j = 0; $j < count($subarray); $j++){
+//         echo $subarray[$j]["title"] . "<br>";
+//         echo $subarray[$j]["author"] . "<br>";
+//         echo $subarray[$j]["text"] . "<br>";
+//     }
+// }
+
+$keys = array_keys($posts);
+
+        for($i = 0; $i < count($keys); $i++){
+            $key = $keys[$i];
+
+            for($j = 0; $j < count($posts[$key]); $j++){
+                $post = $posts[$key][$j];
+
+                echo $key . ' ' . $post['title'] . "<br>" . $post['author'] ."<br>" . $post['text'] . "<br>";
+            }
+        }
 ?>
 </body>
 </html>
