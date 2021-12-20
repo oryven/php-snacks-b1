@@ -17,7 +17,7 @@ Passare come parametri GET name, mail e age e verificare (cercando i metodi che 
     $mail = $_GET["mail"];
     $age = $_GET["age"];
 
-    if (strpos($mail, "@") && strpos($mail, ".") && count($name) > 3){
+    if (strpos($mail, "@") && strpos($mail, ".") && strlen($name) > 3 && is_numeric($age)){
         echo "Accesso riuscito";
     } else {
         echo "Accesso negato";
