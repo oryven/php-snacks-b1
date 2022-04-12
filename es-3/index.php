@@ -65,6 +65,8 @@ $posts = [
 //     }
 // }
 
+//  arrey_keys estrapolate le chiavi di un array
+
 $keys = array_keys($posts);
 
         for($i = 0; $i < count($keys); $i++){
@@ -73,7 +75,7 @@ $keys = array_keys($posts);
             for($j = 0; $j < count($posts[$key]); $j++){
                 $post = $posts[$key][$j];
 
-                echo $key . ' ' . $post['title'] . "<br>" . $post['author'] ."<br>" . $post['text'] . "<br>";
+                echo $key . ' ' . $post['title'] . "<br>" . $post['author'] ."<br>" . $post['text'] . "<br>" . "<hr>";
             }
         }
 ?>

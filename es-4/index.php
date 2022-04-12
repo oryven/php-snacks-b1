@@ -8,16 +8,16 @@
 </head>
 <body>
     <?php
-$arr = [];
+        $arr = [];
 
-while(count($arr) < 15){
-    $rdm = rand(20, 0);
+        while(count($arr) < 15){
+            $rdm = rand(20, 0);
 
-    if (!in_array($rdm, $arr)){
-        $arr [] = $rdm;
-    }
-}
-var_dump($arr);
+            if (!in_array($rdm, $arr)){
+                $arr [] = $rdm;
+            }
+        }
+        var_dump($arr);
     ?>
 </body>
 </html>
